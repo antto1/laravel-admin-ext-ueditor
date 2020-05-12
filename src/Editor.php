@@ -8,15 +8,22 @@ class Editor extends Field
 {
     protected $view = 'laravel-admin-ueditor::editor';
 
+    protected static $css = [
+        'vendor/ueditor/xiumi-ue-v5.css',
+    ];
+
     protected static $js = [
         'vendor/ueditor/ueditor.config.js',
         'vendor/ueditor/ueditor.all.js',
+        'vendor/ueditor/lang/zh-cn/zh-cn.js',
+        'vendor/ueditor/xiumi-ue-dialog-v5.js',
+        'vendor/ueditor/135editor.js',
     ];
 
     public function render()
     {
         $name = $this->formatName($this->column);
-        
+
         $jsId = \Illuminate\Support\Str::studly(\Illuminate\Support\Str::slug($this->id));
 
         $config = Ueditor::config('config', []);
