@@ -30,7 +30,8 @@ class Editor extends Field
 
         $config = json_encode(array_merge($config, $this->options));
 
-        $laravel_ueditor_route = config('ueditor.route.name');
+        $laravel_ueditor_route = url(config('ueditor.route.name'));
+
         $token = csrf_token();
 
         $this->script = <<<EOT
