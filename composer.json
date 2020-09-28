@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "antto1/laravel-admin": "~2.0",
+        "antto1/laravel-admin": "^2.0|^3.0",
         "antto1/laravel-ueditor": "~2.0"
     },
     "require-dev": {
